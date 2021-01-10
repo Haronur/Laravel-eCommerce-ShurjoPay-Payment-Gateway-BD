@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ShurjopayController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/shurjopay', [ShurjopayController::class, 'index'])->name('shurjopay.attemt');
